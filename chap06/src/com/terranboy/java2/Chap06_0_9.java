@@ -1,7 +1,5 @@
 package com.terranboy.java2;
 
-class Data { int x;}
-
 public class Chap06_0_9 {
 
 	public static void main(String[] args) {
@@ -15,6 +13,8 @@ public class Chap06_0_9 {
 		
 		//그럼 참조형 매개변수를 넣는 방법은 어떻게 될까?~~?~? --> 데이터 타입까지 같이 넣어주면 됨. 여기선 Data d
 		
+		
+		//called by value
 		Data d = new Data();
 		d.x = 10;
 		System.out.println(("main() : x = " + d.x));
