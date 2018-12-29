@@ -30,7 +30,7 @@ public class Chap06_2_0 {
 		//--------------------------------------------------------------------
 		//class TestClass2 {
 		//     int iv;         //인스턴스 변수
-		//     static int cv;  //클래스 변수 (클래스 변수 쓰려면 클래스이름.클래스변수 로 쓴다. 여기선 TestClass2.cv
+		//     static int cv;  //클래스 변수 (클래스 변수든 클래스 메서드든 갖다쓰려면 클래스이름.클래스변수로 쓴다. 여기선 TestClass2.cv)
 		// 
 		//     void instanceMethod(){         //인스턴스 메서드
 		//			System.out.println(iv);   //인스턴스 변수 사용 가능
@@ -38,7 +38,7 @@ public class Chap06_2_0 {
 		//     }
 		//
 		//     static void staticMethod()     //static메서드
-		//          System.out.println(iv);   //에러!!! 인스턴스 변수를 사용할 수 없다.
+		//          System.out.println(iv);   //에러!!! 인스턴스 변수를 사용할 수 없다. 사용하려면 뭐라고? 객체 생성해야돼~~
 		//          System.out.println(cv);   //클래스 변수는 사용 가능.	
 	}
 }
@@ -48,12 +48,12 @@ class MemberCall{
 	static int cv = 20;
 	
 	int iv2 = cv;
-	//static int cv2 = iv;                // 에러!!! 클래스 변수는 인스턴스 변수를 사용할 수 없음(생성시점에 상관없이 그냥 안됨)
+	//static int cv2 = iv;                // 에러!!! 클래스 변수는 인스턴스 변수를 사용할 수 없음
 	static int cv2 = new MemberCall().iv; // 이처럼 객체를 생성해야 사용 가능.
 	
 	static void staticMethod1() {
 		System.out.println(cv);
-		//System.out.println(iv);  // 에러!!! 클래스메서드에서 인스턴스 변수 사용 불가(클래스 변수든 메서드든 인스턴스변수는 그냥 사용 자체를 못함)
+		//System.out.println(iv);  // 에러!!! 클래스메서드에서 인스턴스 변수 사용 불가
 		MemberCall c = new MemberCall();
 		System.out.println(c.iv);  // 여기 스태틱 메서드임. 객체 생성 후에 인스턴스 변수를 사용 가능함.
 	}

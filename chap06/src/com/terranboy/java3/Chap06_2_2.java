@@ -9,8 +9,8 @@ public class Chap06_2_2 {
 		//이 기능을 가변인자(variable arguments)라 함.
 		//public PrintStream printf(String format, Object... args){...}
 		//위와같이 가변인자 외에도 매개변수가 더 있다면 마지막에 선언해야 한다.(안그러면 컴파일 에러)
-		//public PrintStream printf(Object... args, String format){...} XXXXXX
-		//public PrintStream printf(String format, Object... args){...} OOOOOO
+		//public PrintStream printf(Object... args, String format){...} // 에러!!XXXXXX
+		//public PrintStream printf(String format, Object... args){...} // OK    OOOOOO
 		//
 		//만약 여러 문자열을 하나로 결합해 반환하는 concatenate메서드를 작성해야 한다면 아래처럼 작성해야 할 것이다.
 		//String concatenate(String s1, String s2){...}
@@ -34,7 +34,7 @@ public class Chap06_2_2 {
 		//그럼 가변인자는 아래와 같이 매개변수의 타입을 배열로 하는 것과 어떤 차이가 있을까?
 		//String concatenate(String[] str){...}
 		//
-		//String result = concatenate(new String[0]);  //인자를 배열로 지정
+		//String result = concatenate(new String[0]);  //인자를 배열로 지정. 이걸 무조건 써줘야되니까 비효율.
 		//String result = concatenate(null);           //인자로 null을 지정
 		//String result = concatenate();               //에러! 인자 필요.
 		//

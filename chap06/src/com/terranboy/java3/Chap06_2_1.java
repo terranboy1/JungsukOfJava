@@ -27,6 +27,7 @@ public class Chap06_2_1 {
 }
 
 class MyMath3 {
+	//아래 것들이 다 오버로딩 된 형태들이다.
 	int add(int a, int b) {
 		System.out.print("int add(int a, int b) - ");
 		return a+b;

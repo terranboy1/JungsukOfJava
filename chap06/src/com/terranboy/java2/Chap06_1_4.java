@@ -13,10 +13,8 @@ public class Chap06_1_4 {
 	
 	static Data copy(Data d) {
 		Data tmp = new Data();
-		tmp.x = d.x;  
+		tmp.x = d.x;
 		
-		return tmp;    //이렇게 새로운 객체의 주소를 반환해줘야 참조변수로 그 주소를 가리키게 된다.
+		return tmp;
 	}
 }
-
-//'반환타입이 참조형'이라는 것은 메서드가 '객체의 주소'를 반환한다는 것을 의미한다.

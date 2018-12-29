@@ -31,9 +31,9 @@ public class Chap06_2_7 {
 		//        }
 		//        
 		//        Car(String color, String gearType){
-		//             count++;
+		//             count++;             //코드 중복
 		//             serialNo = count;    //코드 중복
-		//             this.color = color;  //코드 중복
+		//             this.color = color;  
 		//             this.gearType = gearType;
 		//
 		//        위의 생성자에서 중복되는 부분을 인스턴스 초기화 블럭으로 묶으면
